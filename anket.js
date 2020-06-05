@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client()
 const fs = require('fs')
+const config = require('./config.json')
 client.anket = require('./anket.json')
 
 client.on("ready", () => {
@@ -134,4 +135,4 @@ client.on('message', msg => {
         }
     }
 })*/
-client.login('NTExMDk0NTA3Mjc4Njk2NDY1.XoyLJg.T3DnbvJnWwHkT5ORJxgf5E0DXjQ');
+client.login(config.token);
